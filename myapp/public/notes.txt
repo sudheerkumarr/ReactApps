@@ -1,0 +1,36 @@
+Routing
+==========
+//Step1:  install dependency
+cd myapp
+npm i react-router-dom
+
+step2: enable routing - main.jsx
+import { BrowserRouter } from 'react-router-dom';
+
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+
+step3: Create routes for each and every component in app.jsx
+import { Route, Routes } from 'react-router-dom';
+
+function App() {
+  return (
+    <>
+
+      <Nav />
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route path='/counter' element={<Counter />} />
+        <Route path='/customers' element={<Customers />} />
+      </Routes>
+    </>
+  )
+}
+
+Step 4: update links information in nav bar
+import { NavLink } from 'react-router-dom';
+
+<li className="nav-item">
+   <NavLink className="nav-link" to="/login">Login</NavLin
+</li>
